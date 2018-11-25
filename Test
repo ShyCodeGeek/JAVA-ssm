@@ -1,0 +1,29 @@
+package UserManager;
+
+import java.util.Scanner;
+
+import basic.User;
+
+public class Test {
+	
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		//注册
+		UserManager um= new UserManager();
+		Scanner scanner1 = new Scanner(System.in);
+		System.out.println("请输入 用户名：     ");
+		String a = scanner1.next();
+		User user = um.Query(a);
+		System.out.println("用户名："+user.name+"已存在");
+		System.out.println("请输入 密码：     ");
+		Scanner scanner2 = new Scanner(System.in);
+		String b = scanner2.next();
+		User ui= new User(a,b);
+		um.addUser(ui);
+		System.out.println("注册成功");
+		
+	}
+	
+
+}
