@@ -1,0 +1,29 @@
+package UserManager;
+
+
+import java.util.Scanner;
+
+import basic.User;
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		//登录
+		UserManager um= new UserManager();
+		Scanner scanner1 = new Scanner(System.in);
+		System.out.println("请输入 用户名：     ");
+		String c = scanner1.next();
+		System.out.println("请输入 密码：     ");
+		Scanner scanner2 = new Scanner(System.in);
+		String d = scanner2.next();
+		boolean bool=um.exist(c,d);
+		if(bool==true) {
+			System.out.println("登录成功");
+		}else {
+		System.out.println("账号密码错误");
+		}
+
+	}
+
+}
